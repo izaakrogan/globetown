@@ -1,0 +1,75 @@
+.academy-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.academy-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.video-container {
+  height: 681px;
+  min-height: 0;
+}
+
+.video-container:before {
+  background: rgba(136,148,160,0.4);
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 9999;
+}
+
+.video-play-button {
+  cursor: pointer;
+  left: 50%;
+  margin: -122px 0 0 -122px;
+  padding: 4em;
+  position: absolute;
+  top: 50%;
+  z-index: 9999;
+}
+
+.video-play-button .icon-play {
+  background-image: url("https://8thlight.com/images/icons/icon-play-d284df73.png");
+  background-size: 100px 100px;
+  display: block;
+  height: 100px;
+  margin: 0 auto;
+  width: 100px;
+}
+
+.hero, .video-container {
+  background: #eef2f5;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 681px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  z-index: 0;
+}
+
+.video-container video {
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  display: block;
+  position: relative;
+  top: 50%;
+  width: 100%;
+}
+
+audio, canvas, progress, video {
+  display: inline-block;
+  vertical-align: baseline;
+}
