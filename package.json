@@ -1,0 +1,14 @@
+{
+  "name": "globetown",
+  "version": "1.0.0",
+  "description": "Globetown website",
+  "main": "index.js",
+  "scripts": {
+    "dev": "harp server _harp --port 9001 & browser-sync start _harp/ --proxy 'localhost:9001' --files '**/*.ejs, **/*.less, **/*.json, **/*.js, **/*.coffee' --no-notify"
+  },
+  "author": "Bes and Izaak",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.11.1"
+  }
+}

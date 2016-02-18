@@ -18,6 +18,6 @@ Starting with the production of extensive wireframes and user stories, the team 
 An elegant and robust solution, which integrates well with ICP’s other services.
 
 <p class="center">
-	<img class="abc-mobile" src="/assets/africaneye-mobile.jpg">
-	<img class="abc-laptop" src="/assets/africaneye-laptop-content.jpg">
+    <img class="abc-mobile" src="/assets/africaneye-mobile.jpg">
+    <img class="abc-laptop" src="/assets/africaneye-laptop-content.jpg">
 </p>
