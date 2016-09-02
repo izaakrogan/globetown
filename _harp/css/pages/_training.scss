@@ -1,6 +1,6 @@
 .training {
   height: 100vh;
-  background-image: url('/assets/images/training.png');
+  background-image: url('/assets/images/training.jpeg');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -9,9 +9,13 @@
   align-items: center;
   h1 {
     margin-bottom: 5px;
+    color:$color-one;
+
+  }
+  h3 {
+    color:$color-one
   }
   * {
-    color: white;
     letter-spacing: 1px;
   }
   button {

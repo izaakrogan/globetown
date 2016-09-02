@@ -1,13 +1,13 @@
 <div class="landing">
-    <div class="section-landing-image"></div>
+    <div class="section-landing-image">
+    </div>
     <h1>Globe Town</h1>
+    <h2>We build iOS, Android and web applications <br/> React Native, React and Node.js</h2>
 </div>
 <div class='copy'>
   <div>
-    <h1>We build software for web and mobile using React, React Native and Hapi.</h1>
-    <!-- 
-      <h1>Globe Town crafts beautiful software. Education, quality and collective empowerment are at the heart of what we do. We are rethinking the traditional workplace. By giving talented individuals their autonomy, we are challenging the status quo and providing exceptional value to our clients.</h1>
-    -->
+    <h1>Our team specialises in working with startups, building scalable solutions and bringing ideas to market.</h1>
+    <h1>We have worked with ambitious startups and we know the pitfalls that can kill a good idea. We bring our expertise and experience to help you reach the MVP stage early, prove your business model and iterate towards the product that your customers really want.</h1>
   </div>
 </div>
 
@@ -15,6 +15,7 @@
 <div class="portfolio">
   <div class="images-container">
     <%- partial("./_partials/portfolio", { "link": "portfolio/africabriefcase", "name": "Africa Briefcase", "company": "Africa Media Lab", "imageStyle": "image-one", "display": "" }) %>
+    <%- partial("./_partials/portfolio", { "link": "portfolio/bookee", "name": "Bookee", "company": "Long Neck", "imageStyle": "image-two", "display": "" }) %>
     <%- partial("./_partials/portfolio", { "link": "portfolio/chichester-harbour", "name": "Membership Management", "company": "Chichester Harbour", "imageStyle": "image-four", "display": "" }) %>
     <!--
       <%- partial("./_partials/portfolio", { "link": "portfolio/camdenmaps", "name": "Camden Maps", "company": "Camden Council", "imageStyle": "image-three", "display": "" }) %>
@@ -26,7 +27,7 @@
 </div>
 
 <div id="services-anchor"></div>
-<div class="services">
+<%# <div class="services">
   <ul class="container">
     <div class="grid-4">
       <a href="services/mobile-development">
@@ -57,4 +58,4 @@
     </div>
   </li>
   </ul>
-</div>
+</div>%>
