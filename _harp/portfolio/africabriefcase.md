@@ -17,8 +17,6 @@ After the production of meticulous wireframes and user stories, the project bega
 ## Results
 A beautiful and effective platform for publishing data-driven content to a global audience. Easy to use, robust and highly maintainable.
 
-Founders and Coders have a continued partnership with Revolution Works.
-
 <p class="center">
 	<img class="abc-mobile" src="/assets/images/abc/abc-mobile.jpg">
 	<img class="abc-laptop" src="/assets/images/abc/abc-screen.jpg">
