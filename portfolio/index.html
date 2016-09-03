@@ -8,13 +8,6 @@
   <meta name="description" content="Globe Town | London's React Native Experts. We produce beautiful software and provide training, classes and workshops.">
   <link rel="stylesheet" href="/css/main.css">
   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-  <!-- Check if browser supports vh. If not, add styling for crappy browser -->
-  <script src="/js/modernizr.js"></script>
-  <script type="text/javascript">
-    if (Modernizr.cssvwunit) {
-      document.getElementById("body").className = "no-cssvhunit";
-    }
-  </script>
   <script type="text/javascript" src="https://mandrillapp.com/api/docs/js/mandrill.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="/assets/favicon.ico">
@@ -150,7 +143,7 @@
 	<div class="container">
 		<div itemscope itemtype="http://schema.org/LocalBusiness" class="grid-6 info">
 			<p itemprop="telephone">+44 7931 729 663</p>
-			<a href="mailto:contact@foundersandcoders.org"><p itemprop="email">izaakrogan@gmail.com</p></a>
+			<a href="mailto:hello@globetown.io"><p itemprop="email">hello@globetown.io</p></a>
 			<p itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
 				<span itemprop="streetAddress">14 Palmers Road</span>,
 				<span itemprop="addressLocality">London</span>,
@@ -167,17 +160,85 @@
 		</div>
 		<div class="grid-6">
 			<div class="form" method="post">
-				<form action="//foundersandcoders.us9.list-manage.com/subscribe/post?u=a7247a4b4a67ac1517dba5895&amp;id=ee56d303a5" method="post" target="_blank">
+
+				<form id='gform' action="https://script.google.com/macros/s/AKfycbw-NQWouSunwcgEpWyHkxqijx0qjz-9hwQLLxYwQ1iESVaz9FEp/exec" method="post">
 					<input id="contact-form-name" name="contact-form-name" type="text" placeholder="Name" class="input-one">
-					<input id="contact-form-email" type="email" name="EMAIL" placeholder="Email" class="input-one">
-					<textarea id="contact-form-message" type="text" placeholder="Message"></textarea>
-					<button type="submit" id="mc-embedded-subscribe" class="button-one subscribe">Subscribe</button>
-					<button onclick="contact_form.sendMail(); return false;" class="button-one" type"submit">Send</button>
+					<input id="contact-form-email" type="email" name="email" placeholder="Email" class="input-one">
+					<textarea id="contact-form-message" name="message" type="text" placeholder="Message"></textarea>
+					<h3 id="form_message" style="float:left;display:none;">Thank you!</h3>
+					<button class="button-one" type"submit">Send</button>
 					<pre id="response"></pre>
 				</form>
 			</div>
 		</div>
 	</div>
+	<script>
+		function validEmail(email) {
+		  var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+		  return re.test(email);
+		}
+		// get all data in form and return object
+		function getFormData() {
+		  var elements = document.getElementById("gform").elements; // all form elements
+		  var fields = Object.keys(elements).map(function(k) {
+		    if(elements[k].name !== undefined) {
+		      return elements[k].name;
+		    }
+		  }).filter(function(item, pos, self) {
+		    return self.indexOf(item) == pos && item;
+		  });
+		  var data = {};
+		  fields.forEach(function(k){
+		    data[k] = elements[k].value;
+		  });
+		  console.log(data);
+		  return data;
+		}
+
+		function handleFormSubmit(event) {
+			// handles form submit withtout any jquery
+			// we are submitting via xhr below
+			// get the values submitted in the form
+			// if email is not valid show error
+		  event.preventDefault();
+		  var data = getFormData();
+			console.log('data',data);
+		  if(!validEmail(data.email)) {
+				console.log('not valid email');
+		    document.getElementById('form_message').style.display = 'block';
+				document.getElementById('form_message').style.color = 'red';
+				document.getElementById('form_message').innerHTML = 'Please check your email.';
+		    return false;
+		  } else {
+				console.log('here');
+		    var url = event.target.action;
+		    var xhr = new XMLHttpRequest();
+		    xhr.open('POST',url);
+		    // xhr.withCredentials = true;
+		    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+		    xhr.onreadystatechange = function () {
+					console.log('Thank you!');
+	        // document.getElementById('gform').style.display = 'none';
+	        document.getElementById('form_message').style.display = 'block';
+					document.getElementById('form_message').innerHTML = 'Thank you!';
+					document.getElementById('form_message').style.color = 'green';
+	        return;
+		    };
+		    // url encode form data for sending as post data
+		    var encoded = Object.keys(data).map(function(k) {
+		      return encodeURIComponent(k) + '=' + encodeURIComponent(data[k])
+		    }).join('&');
+		    xhr.send(encoded);
+		  }
+		}
+		function loaded() {
+		  console.log('contact form submission handler loaded successfully');
+		  // bind to the submit event of our form
+		  var form = document.getElementById('gform');
+		  form.addEventListener("submit",handleFormSubmit,false);
+		};
+		document.addEventListener('DOMContentLoaded',loaded,false);
+	</script>
 </div>
 
   <footer>
