@@ -8,9 +8,5 @@ Long Neck are a startup who have set out to disrupt their industry. They needed 
 ## Solution
 After the production of meticulous wireframes and user stories, the project began with the production of an alpha application. Starting from this foundation, the team worked in fortnightly sprints, using agile principles until completion. Our processes ensured quality, timing and flexibility.
 
-<p class="center">
-	<img class="abc-laptop" src="/assets/images/bookee/backoffice.png">
-</p>
-
 ## Results
 A slick, scalable and beautiful solution. The product has set a new standard in usability for the industry.
