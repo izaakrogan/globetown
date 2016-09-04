@@ -1,6 +1,6 @@
 # Bookee
 
-<p class="center"><img class="abc-desktop" src="/assets/images/bookee/phone.png"></p>
+<p class="center"><img class="abc-desktop" src="/assets/images/bookee/phone.jpg"></p>
 
 ## Challenge
 Long Neck are a startup who have set out to disrupt their industry. They needed a native mobile application which would set them apart from their competitors, a back office to manage their innovative system design and analytics to help them towards their next round of investment.
