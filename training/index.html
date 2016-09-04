@@ -25,13 +25,16 @@
     <nav id="navbar">
   <div class="dropdownToggle">
     <div class="logo">
-      <h2 id='globetown-logo' class='hello'><a href="/">GLOBETOWN</a></h2>
+      <h2 id='globetown-logo'><a href="/">GLOBETOWN</a></h2>
     </div>
     <div class="links-container">
     <div class="nav-settings-dropdown hide">
       <ul>
         <li>
-          <h2><a href='/'>HOME</a></h2>
+          <h2><a href='/'>PROJECTS</a></h2>
+        </li>
+        <li>
+          <h2><span>/</span></h2>
         </li>
         <li>
           <h2><a href='/training'>TRAINING</a></h2>
@@ -51,8 +54,8 @@
 
      <div class="training">
   <h1><span class="desktop">Practical t</span><span class="mobile">T</span>raining for software developers</h1>
-  <h3><span class="desktop">Globe Town offers hands-on training</span><span class="mobile">Training</span> in React and React Native</h3>
-  <a href="#contact"><button class="button-one">TALK TO US</button></a>
+  <h3><span class="desktop">We run hands-on training in </span>React & React Native</h3>
+  <a onclick="fac.nav_scroll('/training/', 'contact')"><button class="button-one">TALK TO US</button></a>
 </div>
 
 <div class="box-container">
@@ -61,19 +64,19 @@
 <div class="training-copy">
   <div>
     <p>We love teaching software and offer training in React, React Native, Node and TDD either on site or at our offices in Bethnal Green.</p>
-    <p>Given notice we can also provide bespoke training accross across our stack:</p>
+    <p>Given notice we can provide bespoke training accross across our stack.</p>
     <ul>
-<li><strong>Languages</strong>: ..JavaScript, Python, Go, R</li>
-<li><strong>Backend</strong>: Node.js, Hapi, Express, Sails.js</li>
-<li><strong>Frontend</strong>: React, AngularJS</li>
-<li><strong>Mobile</strong>: React Native</li>
-<li><strong>Data visualisation and mapping</strong>: D3</li>
-<li><strong>Deployment</strong>: GitHub, Amazon S3</li>
-<li><strong>Databases</strong>: MongoDB, PostgresSQL, Redis, ElasticSearch</li>
-<li><strong>Testing</strong>: QUnit, Mocha, Lab, Tape, Jasmine, Protractor</li>
-<li><strong>Code coverage</strong>: Code Climate</li>
-<li><strong>Continuous integration</strong>: Travis CI, Codeship</li>
-<li><strong>Agile project management tools</strong>: Pivotal Tracker</li>
+<li>Languages: JavaScript, Python, Go, R</li>
+<li>Backend: Node.js, Hapi, Express, Sails.js</li>
+<li>Frontend: React, AngularJS</li>
+<li>Mobile: React Native</li>
+<li>Data visualisation and mapping: D3</li>
+<li>Deployment: GitHub, Amazon S3</li>
+<li>Databases: MongoDB, PostgresSQL, Redis, ElasticSearch</li>
+<li>Testing: QUnit, Mocha, Lab, Tape, Jasmine, Protractor</li>
+<li>Code coverage: Code Climate</li>
+<li>Continuous integration: Travis CI, Codeship</li>
+<li>Agile project management tools: Pivotal Tracker</li>
 </ul>
 
   </div>
@@ -104,7 +107,7 @@
 				<form id='gform' action="https://script.google.com/macros/s/AKfycbw-NQWouSunwcgEpWyHkxqijx0qjz-9hwQLLxYwQ1iESVaz9FEp/exec" method="post">
 					<input id="contact-form-name" name="contact-form-name" type="text" placeholder="Name" class="input-one">
 					<input id="contact-form-email" type="email" name="email" placeholder="Email" class="input-one">
-					<textarea id="contact-form-message" name="message" type="text" placeholder="Message"></textarea>
+					<textarea id="contact-form-message" name="message" type="text" placeholder="Tell us about your project"></textarea>
 					<h3 id="form_message" style="float:left;display:none;">Thank you!</h3>
 					<button class="button-one" type"submit">Send</button>
 					<pre id="response"></pre>
