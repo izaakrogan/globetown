@@ -44,9 +44,10 @@
     text-align: center;
     align-self: center;
     margin: auto;
-    font-size: 30px;
-    color: $color-one;
+    font-size: 6em;
+    color: black;
     padding-bottom: 70px;
+    font-family: 'alternate-gothic'
   }
 }
 
@@ -77,7 +78,7 @@
 		margin-bottom: 5%;
 		font-size: 24px;
 		line-height: 150%;
-    color: $color-three;
+    color: #aaa;
 	}
 	h1:last-child {
 		margin-bottom: 0;
@@ -166,25 +167,12 @@
 	padding-bottom: 0;
 }
 
-@media (max-width: 1000px) {
-	.portfolio {
-		padding: 50px 10px;
-		.grid-2 {
-			padding: 15px;
-		}
-	}
-}
-
 @media (max-width: 400px) {
 	.landing {
 		height: 90vh;
-	}
-	.portfolio {
-		padding: 50px 0;
-		.grid-2 {
-			padding: 15px;
-			padding-bottom: 0;
-		}
+    .section-landing-image {
+      background-position: 845px;
+    }
 	}
 }
 
