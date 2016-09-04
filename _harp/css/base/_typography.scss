@@ -9,7 +9,7 @@ body {
   margin: 0;
 }
 
-* {
+p {
   font-family: 'Lato', sans-serif;
 }
 
@@ -17,6 +17,11 @@ h1, h2, h3, h4, p {
   color: #333;
   font-weight: 100;
 }
+
+h1, h2, h3, h4, button {
+  font-family: 'alternative-gothic', sans-serif;
+}
+
 
 p {
   font-size: 1.2em;

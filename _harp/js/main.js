@@ -47,6 +47,11 @@
 
 
 var fac = (function (){
+
+  var reveal = {
+      nav_scroll: nav_scroll,
+  };
+
   function img_resize()	{
       var imgWidth = document.getElementById("img").offsetWidth;
       var elements = document.getElementsByClassName('im');
@@ -65,5 +70,70 @@ var fac = (function (){
   window.onload = function() {
       home_resize();
   }
+  function currentYPosition() {
+      if (self.pageYOffset) return self.pageYOffset;
+      if (document.documentElement && document.documentElement.scrollTop)
+          return document.documentElement.scrollTop;
+      if (document.body.scrollTop) return document.body.scrollTop;
+      return 0;
+  }
+
+  function elmYPosition(eID) {
+      var elm = document.getElementById(eID);
+      var y = elm.offsetTop;
+      var node = elm;
+      while (node.offsetParent && node.offsetParent != document.body) {
+          node = node.offsetParent;
+          y += node.offsetTop;
+      } return y;
+  }
+  /**
+   * Scroll section into view.
+   *
+   */
+  function smoothScroll (eID) {
+      var startY = currentYPosition();
+      var stopY = elmYPosition(eID);
+      var distance = stopY > startY ? stopY - startY : startY - stopY;
+      if (distance < 100) {
+          scrollTo(0, stopY); return;
+      }
+      var speed = Math.round(distance / 100);
+      if (speed >= 20) speed = 20;
+      var step = Math.round(distance / 25);
+      var leapY = stopY > startY ? startY + step : startY - step;
+      var timer = 0;
+      if (stopY > startY) {
+          for ( var i=startY; i<stopY; i+=step ) {
+              setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
+              leapY += step; if (leapY > stopY) leapY = stopY; timer++;
+          } return;
+      }
+      for ( var i=startY; i>stopY; i-=step ) {
+          setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
+          leapY -= step; if (leapY < stopY) leapY = stopY; timer++;
+      }
+  }
+
+  function nav_scroll(page, anchor) {
+    if(anchor) {
+      console.log('window.location.pathname', window.location.pathname);
+      if (window.location.pathname != page) {
+          location = page+'#'+anchor
+      }
+      // stop page scrolling before load
+      setTimeout(function() {
+          console.log(anchor);
+          smoothScroll(anchor);
+      }, 1);
+    }
+    if(!anchor) {
+      if (window.location.pathname != page) {
+          location = page+'#'
+      }
+    }
+  }
+
+  return reveal;
 
 }());

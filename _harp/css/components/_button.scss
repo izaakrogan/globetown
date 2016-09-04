@@ -1,11 +1,12 @@
 %button {
 	font-size: 18px;
-	font-weight: 100;
+	letter-spacing: 1px;
+	font-family: 'alternate-gothic';
 	display: inline-block;
 	cursor: pointer;
 	background-image: none;
 	white-space: nowrap;
-	padding: 12px 20px;
+	padding: 6px 20px 0 20px;
 	height: 45px;
 	border-radius: 1px;
 	width: auto;
@@ -25,14 +26,16 @@
 .button-one {
 	@extend %button;
 	color: #fff;
-	background-color: $color-one;
+	background-color: $color-six;
 	border: none;
 	border-radius: 40px;
 	&:hover {
-		background-color: #999;
+		background-color: $color-seven;
+		color:$color-six;
 	}
 	&:active {
-		background-color: $color-one;
+		background-color: $color-six;
+		color:$color-seven;
 	}
 }
 

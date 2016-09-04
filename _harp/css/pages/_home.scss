@@ -1,12 +1,13 @@
 .landing {
   width: 100%;
   display: flex;
-  justify-content: flex-start;
+  flex-direction: column;
+  justify-content: center;
   align-items: flex-end;
 	height: 90vh;
   margin-top: 10vh;
 	.section-landing-image {
-    background-image: url("/assets/images/home.png");
+    background-image: url("/assets/images/home2.jpg");
 		background-size: cover;
 		background-position: center;
 		height: 100%;
@@ -34,20 +35,24 @@
 	}
 	h1 {
     display: none;
-    color: $color-one;
-    font-size: 50px;
+    color: black;
+    font-size: 4em;
     margin-left: 30px;
     margin-bottom: 30px;
-    font-family: 'Lobster', cursive;
+    font-family: 'alternate-gothic'
 	}
   h2 {
     text-align: center;
     align-self: center;
-    margin: auto;
     font-size: 6em;
     color: black;
-    padding-bottom: 70px;
     font-family: 'alternate-gothic'
+  }
+  a {
+    align-self: center;
+  }
+  button {
+    margin-top: 20px;
   }
 }
 
@@ -143,6 +148,7 @@
 			flex-direction: column;
 			transition: opacity .7s ease-in-out;
 			h3 {
+        font-family: 'alternate-gothic';
 				margin: 20px;
 				transition: margin 0.7s ease-in-out;
         font-size: 2em;

@@ -9,26 +9,52 @@
   align-items: center;
   h1 {
     margin-bottom: 5px;
-    color:$color-one;
+    color:black;
+    font-size: 4em;
   }
   h3 {
-    color:$color-one
+    color:black;
+    font-size: 2em;
   }
-  * {
+  h1, h3, span {
     letter-spacing: 1px;
+    font-family: 'alternate-gothic';
   }
   button {
     margin: 1.5em;
   }
 }
 
+@media(max-width:950px) {
+  .training {
+    h1 {
+      font-size: 3em;
+    }
+    h3 {
+      font-size: 2em;
+    }
+  }
+}
+
+@media(max-width:500px) {
+  .training {
+    h1 {
+      font-size: 2.3em;
+    }
+    h3 {
+      font-size: 3em;
+    }
+  }
+}
+
+
 @media(max-width:400px) {
   .training {
     h1 {
-      font-size: 1.2em;
+      font-size: 1.5em;
     }
     h3 {
-      font-size: 1em;
+      font-size: 2.5em;
     }
   }
 }
