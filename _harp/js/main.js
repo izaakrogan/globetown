@@ -1,7 +1,14 @@
 (function (){
   function toggleHandler(toggle) {
     var iconplease = document.getElementById("cmn-toggle-switch");
-    (iconplease.classList.contains("active") === true) ? iconplease.classList.remove("active") : iconplease.classList.add("active");
+    var globetown = document.getElementById("globetown-logo");
+    if(iconplease.classList.contains("active") === true) {
+      iconplease.classList.remove("active")
+      globetown.classList.remove("active")
+    } else {
+      iconplease.classList.add("active")
+      globetown.classList.add("active")
+    }
   }
 
   var dropdown      = document.querySelectorAll('.dropdownToggle');
@@ -58,5 +65,5 @@ var fac = (function (){
   window.onload = function() {
       home_resize();
   }
-  
+
 }());
