@@ -14,6 +14,9 @@ nav {
 	h2 {
 		color: $color-two;
 	}
+	a:hover {
+		cursor: pointer;
+	}
 	p {
 		float: right;
 		line-height: 20vh;
