@@ -11,7 +11,7 @@
     }
   }
 
-  var dropdown      = document.querySelectorAll('.dropdownToggle');
+  var dropdown      = document.querySelectorAll('.nav');
   var dropdownArray = Array.prototype.slice.call(dropdown,0);
 
   dropdownArray.forEach(function (dropdown){
