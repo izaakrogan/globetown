@@ -1,4 +1,4 @@
-+ Languages: JavaScript, Python, Go, R
++ Languages: JavaScript, Python, R
 + Backend: Node.js, Hapi, Express, Sails.js
 + Frontend: React, AngularJS
 + Mobile: React Native
