@@ -143,6 +143,6 @@ $(document).ready(function(){
   img.src = "/assets/images/home.png";
   img.onload = function() {
       $("#section-landing-image").css("background-image", 'url('+img.src+')');
+      $("#section-landing-image").css("filter", 'none');
   };
-  $("#section-landing-image").css("filter", 'none');
 });
