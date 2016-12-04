@@ -1,3 +1,23 @@
+#section-landing-image {
+  background-image: url("/assets/images/home2_lowres.jpg");
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  -o-filter: blur(10px);
+  -ms-filter: blur(10px);
+  filter: blur(10px);
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: opacity .3s ease-in-out;
+  opacity: 1;
+  transition: 1s -webkit-filter linear;
+}
+
 .landing {
   width: 100%;
   display: flex;
@@ -6,30 +26,6 @@
   align-items: flex-end;
 	height: 90vh;
   margin-top: 10vh;
-	.section-landing-image {
-    background-image: url("/assets/images/home2.jpg");
-		background-size: cover;
-		background-position: center;
-		height: 100%;
-		width: 100%;
-		position: absolute;
-		top: 0;
-    left: 0;
-		z-index: -1;
-		transition: opacity .3s ease-in-out;
-		opacity: 1;
-	}
-	.section-landing-image-alt {
-    background-image: url("/assets/images/hands.png");
-		background-size: cover;
-		background-position: center;
-		height: 100%;
-		width: 100%;
-		position: absolute;
-		top: 0;
-    left: 0;
-		z-index: -2;
-	}
 	h1, p, span {
 		color: #999;
 	}

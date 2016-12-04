@@ -1,5 +1,5 @@
 (function (){
-  
+
   function toggleHandler(toggle) {
     var iconplease = document.getElementById("cmn-toggle-switch");
     var globetown = document.getElementById("globetown-logo");
@@ -137,3 +137,12 @@ var fac = (function (){
   return reveal;
 
 }());
+
+$(document).ready(function(){
+  var img = new Image()
+  img.src = "/assets/images/home.png";
+  img.onload = function() {
+      $("#section-landing-image").css("background-image", 'url('+img.src+')');
+  };
+  $("#section-landing-image").css("filter", 'none');
+});
