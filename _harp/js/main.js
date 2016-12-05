@@ -140,11 +140,18 @@ var fac = (function (){
 
 $(document).ready(function(){
   var img = new Image()
-  img.src = "/assets/images/home.png";
+  var location
+  if (window.location.pathname == '/training/') {
+    img.src = "/assets/images/training.jpeg";
+    location = '#section-training-image'
+  } else {
+    img.src = "/assets/images/home.png";
+    location = '#section-landing-image'
+  }
   img.onload = function() {
-      $("#section-landing-image").css("background-image", 'url('+img.src+')');
+      $(location).css("background-image", 'url('+img.src+')');
       setTimeout(function() {
-        $("#section-landing-image").css("filter", 'none');
+        $(location).css("filter", 'none');
       }, 1);
   };
 });

@@ -1,24 +1,53 @@
-.training {
-  height: 100vh;
-  background-image: url('/assets/images/training.jpeg');
+#section-training-image {
+  background-image: url('/assets/images/training_lowres.jpeg');
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  -o-filter: blur(10px);
+  -ms-filter: blur(10px);
+  filter: blur(10px);
   background-size: cover;
   background-position: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: opacity .3s ease-in-out;
+  opacity: 1;
+  transition: 1s filter linear;
+  -webkit-transition: 1s -webkit-filter linear;
+  -moz-transition: 1s -moz-filter linear;
+  -ms-transition: 1s -ms-filter linear;
+  -o-transition: 1s -o-filter linear;
+}
+
+.training {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
+	height: 90vh;
+  margin-top: 10vh;
+  h1, h3, span {
+    letter-spacing: 1px;
+    font-family: 'alternate-gothic';
+  }
   h1 {
     margin-bottom: 5px;
     color:black;
     font-size: 4em;
+    align-self: center;
   }
   h3 {
     color:black;
     font-size: 2em;
+    text-align: center;
+    align-self: center;
   }
-  h1, h3, span {
-    letter-spacing: 1px;
-    font-family: 'alternate-gothic';
+  a {
+    align-self: center;
   }
   button {
     margin-top:20px;
