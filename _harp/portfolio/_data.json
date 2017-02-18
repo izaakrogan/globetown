@@ -1,0 +1,14 @@
+{
+  "bookee": {
+    "title": "Globetown | Bookee",
+    "description": "Bookee is a slick, scalable and beautiful solution built using React Native and Node.js. The product has set a new standard in usability for the industry."
+  },
+  "africabriefcase": {
+    "title": "Globetown | Africabriefcase",
+    "description": "Africa briefcase is a service-orientated responsive web application, built using Node.js, Sails and AngularJS."
+  },
+  "chichester-harbour": {
+    "title": "Globetown | Chichester Harbour",
+    "description": "A beautiful and easy to use customer relationship management system, built mobile first and offering a blazingly-fast user experience on both desktop and mobile."
+  }
+}
