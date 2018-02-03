@@ -1,6 +1,6 @@
 + Languages: JavaScript, Python, R
-+ Backend: Node.js, Hapi, Express, Sails.js
-+ Frontend: React, AngularJS
++ Frontend JS: React, AngularJS
++ Backend JS: Node.js, Hapi, Express, Sails.js
 + Mobile: React Native
 + Data visualisation and mapping: D3
 + Deployment: GitHub, Amazon S3
@@ -8,4 +8,3 @@
 + Testing: QUnit, Mocha, Lab, Tape, Jasmine, Protractor
 + Code coverage: Code Climate
 + Continuous integration: Travis CI, Codeship
-+ Agile project management tools: Pivotal Tracker

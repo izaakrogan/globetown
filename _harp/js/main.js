@@ -145,7 +145,7 @@ $(document).ready(function(){
     img.src = "/assets/images/training.jpeg";
     location = '#section-training-image'
   } else {
-    img.src = "/assets/images/home.png";
+    img.src = "/assets/images/home.jpg";
     location = '#section-landing-image'
   }
   img.onload = function() {
